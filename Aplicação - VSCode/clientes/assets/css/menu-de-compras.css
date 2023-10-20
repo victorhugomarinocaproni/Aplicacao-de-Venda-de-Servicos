@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;
+    backdrop-filter: blur(1rem);
+    border-bottom: 0.15rem solid gray;
+}
+
+.title {
+    font-size: 2rem;
+    color: white;
+    font-weight: 400;
+}
+
+.nav-menu {
+    width: 30rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 3rem;
+}
+
+.search input {
+    width: 75%;
+    height: 2.5rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding-left: 1rem;
+    border: 0.1rem solid gray;
+}
+
+.search div {
+    width: 20%;
+    height: 2.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid gray;
+    background-color: white;
+    cursor: pointer;
+}
+
+.search-icon {
+    font-size: 1.8rem;
+}
+
+.cart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2.2rem;
+    cursor: pointer;
+}
+
+.cart-icon {
+    font-size: 2rem;
+}
+
+.products-gallery {
+    background-image: url(../img/JPGs/main-bg-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.main-content {
+    padding-top: 10rem;
+    width: 100%;
+}
+
+.back-button {
+    width: 8rem;
+    height: 3.5rem;
+    font-size: 2rem;
+    font-weight: 100;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    margin-left: 87%;
+    background: none;
+    border: 0.1rem solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.main-products-container {
+    max-width: 87%;
+    height: 50rem;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 10rem;
+    gap: 5rem 0;
+    overflow-y: scroll;
+}
+
+.product-card {
+    width: 20rem;
+    height: 25rem;
+    border-radius: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0.6rem 1.5rem 1.5rem 1.1rem rgba(0,0,0,0.5);
+}
+
+.bh-card-image {
+    background-image: url(../img/JPGs/pc-card-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 20rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.circle-component {
+    position: absolute;
+    background-color: gray;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    left: 40%;
+    top: 73%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-name {
+    background-color: gray;
+    width: 100%;
+    height: 5rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-name span {
+    font-size: 1.8rem;
+    z-index: 2;
+    color: white;
+}
+
+.pc-icon {
+    width: 45%;
+}
