@@ -57,7 +57,7 @@ body {
     transform: scale(1.1);
 }
 
-.main-container div span a {
+.main-container div a {
     font-size: 3rem;
     color: white;
     -webkit-text-stroke: 0.1rem #000;

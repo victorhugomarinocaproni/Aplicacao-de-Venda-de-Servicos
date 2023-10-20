@@ -79,6 +79,7 @@ body {
 
 .cart-icon {
     font-size: 2rem;
+    color: white;
 }
 
 .products-gallery {
@@ -100,14 +101,17 @@ body {
     font-size: 2rem;
     font-weight: 100;
     border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
     padding-left: 0.5rem;
     margin-left: 87%;
     background: none;
     border: 0.1rem solid white;
-    color: white;
     cursor: pointer;
+}
+
+.back-button a {
+    color: white;
+    display: flex;
+    align-items: center;
 }
 
 .main-products-container {
@@ -132,12 +136,29 @@ body {
 }
 
 .bh-card-image {
+    height: 20rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.building {
     background-image: url(../img/JPGs/pc-card-img.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 20rem;
-    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.formatting {
+    background-image: url(../img/JPGs/formatting.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cleaning {
+    background-image: url(../img/JPGs/cleaning-card-icon.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .circle-component {

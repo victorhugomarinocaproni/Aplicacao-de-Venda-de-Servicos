@@ -60,7 +60,7 @@ body {
     font-weight: 600;
     color: var(--darker-purple);
     padding-top: 6rem;
-    padding-left: 8rem;
+    padding-left: 3.5rem;
 }
 
 .main-container label {
@@ -90,12 +90,14 @@ body {
     height: 3.5rem;
     margin-left: 3rem;
     margin-top: 2rem;
-    font-size: 2rem;
-    color: white;
     background-color: var(--darker-purple);
     border: none;
     border-radius: 0.5rem;
     transition: all 150ms ease-in-out;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
 }
 
 .login-button:hover {
@@ -103,7 +105,7 @@ body {
 }
 
 .main-container p {
-    margin-left: 4.5rem;
+    margin-left: 5rem;
     margin-top: 1.5rem;
     font-size: 1.3rem;
     color: white;
