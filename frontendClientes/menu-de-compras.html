@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <link rel="stylesheet" href="./assets/css/menu-de-compras.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome da Loja</title>
+</head>
+<body>
+    
+    <main>
+        <header class="menu">
+            <h1 class="title">Nome da Loja</h1>
+            <!-- <nav class="nav-menu">
+                <div class="search">
+                    <input type="text" placeholder="Search for a service">
+                    <div class="clickable-search">
+                        <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                    </div>
+                </div>
+                <div class="cart-container">
+                    <ion-icon name="cart-outline" class="cart-icon"></ion-icon>
+                </div>
+            </nav> -->
+        </header>
+
+        <div class="products-gallery">
+
+            <div class="main-content">
+
+                <button class="back-button"><a href="./first-screen.html"><ion-icon name="arrow-back-outline"></ion-icon>Voltar</a></button>
+    
+                <div class="main-products-container">
+
+                    <div class="product-card building-bg building-card">
+                        <div class="bh-card-image card building-card"></div>
+                        <div class="circle-component card building-card">
+                            <img class="pc-icon card building-card" src="./assets/img/SVGs/computer-icon.svg" alt="">
+                        </div>
+                        <div class="card-name card building-card">
+                            <span class="card building-card">Montagem</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card formatting-bg formatting-card">
+                        <div class="bh-card-image card formatting-card"></div>
+                        <div class="circle-component card formatting-card">
+                            <img class="pc-icon card formatting-card" src="./assets/img/SVGs/computer-icon.svg" alt="">
+                        </div>
+                        <div class="card-name card formatting-card">
+                            <span class="card formatting-card">Formatação</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card cleaning-bg cleaning-card">
+                        <div class="bh-card-image card cleaning-card"></div>
+                        <div class="circle-component card cleaning-card">
+                            <img class="pc-icon card cleaning-card" src="./assets/img/SVGs/computer-icon.svg" alt="">
+                        </div>
+                        <div class="card-name card cleaning-card">
+                            <span class="card cleaning-card">Limpeza</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="bh-card-image card"></div>
+                        <div class="circle-component card">
+                            <img class="pc-icon card" src="./assets/img/SVGs/computer-icon.svg" alt="">
+                        </div>
+                        <div class="card-name card">
+                            <span class="card">Pc building</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="bh-card-image card"></div>
+                        <div class="circle-component card">
+                            <img class="pc-icon card" src="./assets/img/SVGs/computer-icon.svg" alt="">
+                        </div>
+                        <div class="card-name card">
+                            <span class="card">Pc building</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="bh-card-image card"></div>
+                        <div class="circle-component card">
+                            <img class="pc-icon card" src="./assets/img/SVGs/computer-icon.svg" alt="">
+                        </div>
+                        <div class="card-name card">
+                            <span class="card">Pc building</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="bh-card-image card"></div>
+                        <div class="circle-component card">
+                            <img class="pc-icon card" src="./assets/img/SVGs/computer-icon.svg" alt="">
+                        </div>
+                        <div class="card-name card">
+                            <span class="card">Pc building</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="bh-card-image card"></div>
+                        <div class="circle-component card">
+                            <img class="pc-icon card" src="./assets/img/SVGs/computer-icon.svg" alt="">
+                        </div>
+                        <div class="card-name card">
+                            <span class="card">Pc building</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="bh-card-image card"></div>
+                        <div class="circle-component card">
+                            <img class="pc-icon card" src="./assets/img/SVGs/computer-icon.svg" alt="">
+                        </div>
+                        <div class="card-name card">
+                            <span class="card">Pc building</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <button class="confirm-buy-button">Finalizar compra<ion-icon name="cart-outline" class="cart-icon"></ion-icon></button> -->
+
+            </div>
+        </div>
+
+        <div class="pop-up remove-pop-up">
+            <div class="pop-up-container card">
+                <div class="close-element">
+                    <ion-icon name="close-outline" class="close-icon"></ion-icon>
+                </div>
+                
+                <div class="product-img card"></div>
+                <div class="service-desc card">
+                    <h1 class="card pop-up-title">Service</h1>
+                    <p class="card pop-up-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero suscipit ad quo ducimus repudiandae, quisquam, ut iusto impedit beatae ipsa enim totam repellat repellendus nisi. Accusantium quisquam minus dicta beatae?</p>
+                </div>
+                <div class="price card">
+                    <h1 class="card pop-up-price">R$ 30,00</h1>
+                </div>
+                <button id="botao-comprar" class="add-to-cart-button">Comprar<ion-icon name="cart-outline" class="cart-icon"></ion-icon></button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Link com o arquivo JS-->
+    <script src="./assets/js/menuDeCompras.js"></script>
+    <script src="./assets/js/registraPedido.js"></script>
+
+    <!-- Link com a API do ionIcons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>         
+</body>
+</html>
