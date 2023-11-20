@@ -17,6 +17,37 @@ class PedidoModel{
         });
     }
 
+    listar(id){
+        const sql = `SELECT * FROM pedidos WHERE cartao_id = ${id} AND status_pedido = 'A'`;
+        return new Promise((resolve, reject)=>{
+            conexao.query(sql, (error, resposta)=>{
+                if(error){
+                    console.log("Erro ao listar os pedidos");
+                    reject(error);
+                }
+                console.log("Pedidos listados com sucesso!");
+                resolve(resposta);
+            })
+        });
+    }
+
+    atualizar(id){
+        console.log(id);
+        const sql = `UPDATE pedidos SET status_pedido = 'F' WHERE cod_pedido = ${id}`;
+        return new Promise((resolve, reject)=>{
+            conexao.query(sql, (error, resposta)=>{
+                if(error){
+                    console.log(error);
+                    console.log("Erro ao atualizar os pedidos");
+                    
+                    reject(error);
+                }
+                console.log("Pedido utilizado com sucesso!");
+                resolve(resposta);
+            })
+        });
+    }
+
 }
 
 module.exports = new PedidoModel();

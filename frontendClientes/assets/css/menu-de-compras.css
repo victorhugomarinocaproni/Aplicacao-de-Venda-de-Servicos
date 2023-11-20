@@ -184,6 +184,20 @@ body {
     background-repeat: no-repeat;
 }
 
+.consultoria-bg {
+    background-image: url(../img/JPGs/consultoria.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.console-bg {
+    background-image: url(../img/JPGs/console.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .circle-component {
     position: absolute;
     background-color: gray;

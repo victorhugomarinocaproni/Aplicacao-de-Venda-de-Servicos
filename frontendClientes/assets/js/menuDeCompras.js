@@ -57,6 +57,22 @@ function myApplication(){
             popUpPrice.innerHTML = 'R$ 15,00';
             botaoComprar.classList.add('cleaning');
         }
+
+        if(element.classList.contains('consultoria-card')){
+            popUpBackground.classList.add('consultoria-bg');
+            popUpTitle.innerHTML = 'Consultoria';
+            popUpDesc.innerHTML = 'Quer montar uma máquina mas não entende de Hardware? Vem trocar uma ideia com a gente que nós te ajudamos!'
+            popUpPrice.innerHTML = 'R$ 50,00';
+            botaoComprar.classList.add('consultoria');
+        }
+
+        if(element.classList.contains('cleaning-card')){
+            popUpBackground.classList.add('cleaning-bg');
+            popUpTitle.innerHTML = 'Limpeza';
+            popUpDesc.innerHTML = 'Realizamos a limpeza completa do seu computador!'
+            popUpPrice.innerHTML = 'R$ 15,00';
+            botaoComprar.classList.add('cleaning');
+        }
     }
 
     managePopUp();
