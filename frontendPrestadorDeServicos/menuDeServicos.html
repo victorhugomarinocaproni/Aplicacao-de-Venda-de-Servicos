@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="./assets/css/menuDeServicos.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Serviços</title>
+</head>
+<body>
+
+
+    <main class="main-screen">
+        <header class="header">
+            <div>
+                <h1>InFocus Store</h1>
+            </div>
+        </header>
+
+        <div class="services-main-container">
+
+            <div class="services-title">
+                <h1>Serviços</h1>
+            </div>
+
+            <div class="services-box">
+
+                <div class="subtitle">
+                    <h3>Servicos</h3>
+               </div>
+
+               <form method="get" class="form">
+
+               
+               </form>
+        
+            </div>
+
+            <div class="close-element">
+                <ion-icon name="close-outline" class="close-icon"></ion-icon>
+            </div>
+
+        </div>
+
+        <div class="pop-up-container fecha-pop-up"> <!-- fecha-pop-up -->
+            <div class="lateral-ticket">
+                <span class="ticket-code-1">Ticket com suas recompensas</span>
+                <span class="ticket-code-2">Store's Name</span>
+                <div class="codigo-de-barras">
+                    <div class="media"></div>
+                    <div class="fina"></div>
+                    <div class="fina"></div>
+                    <div class="grossa"></div>
+                    <div class="fina"></div>
+                    <div class="media"></div>
+                    <div class="media"></div>
+                    <div class="fina"></div>
+                    <div class="media"></div>
+                    <div class="fina"></div>
+                    <div class="media"></div>
+                    <div class="fina"></div>
+                    <div class="fina"></div>
+                    <div class="fina"></div>
+                    <div class="grossa"></div>
+                    <div class="fina"></div>
+                    <div class="grossa"></div>
+                    <div class="media"></div>
+                    <div class="media"></div>
+                    <div class="fina"></div>
+                    <div class="media"></div>
+                    <div class="fina"></div>
+                    <div class="media"></div>
+                    <div class="media"></div>
+                    <div class="fina"></div>
+                    <div class="fina"></div>
+                    <div class="grossa"></div>
+                </div>
+            </div>
+            <div class="pop-up-recompensa">
+                <h1 class="titulo-recompensas">Recompensas</h1>
+                <div class="linha-titulo"></div>
+                <div class="recompensas-container">
+                    <form method="get" class="form-recompensa"></form>
+                </div>
+                <div class="decoration-image">
+                    <img src="./assets/img/PNG/presente-no-bg.png" alt="" class="image-itslef">
+                </div>
+                
+                <div class="close-element-pop-up">
+                    <ion-icon name="close-outline" class="close-icon-pop-up"></ion-icon>
+                </div>  
+            </div>
+        </div>
+
+        <div class="pop-up-aviso-recompensa fecha-pop-up-aviso">
+            <div class="pop-up-aviso">
+                <div class="imagem-aviso"></div>
+                <div class="sombreamento"></div>
+                <h1 class="titulo-aviso">Você ganhou uma recompensa!</h1>
+                <div class="linha-titulo-aviso"></div>
+                 <span class="titulo-recompensa-ganha"></span>
+                <button class="fechar-aviso">Avançar</button> 
+                <div class="container-x">
+                    <ion-icon name="close-outline" class="icone-x"></ion-icon>
+                </div>  
+               
+            </div>
+        </div>
+
+
+    </main>
+
+    <system.webServer>
+        <modules runAllManagedModulesForAllRequests="false">
+          <remove name="WebDAVModule" />
+        </modules>
+    </system.webServer>
+
+    <script src="./assets/js/listaPedidos.js"></script>
+    <script src="./assets/js/validaOrdemPedido.js"></script>
+    <script src="./assets/js/popUp.js"></script>
+    <script src="./assets/js/botaoVoltar.js"></script>
+
+    <!-- Conectando com a API do IonIcon-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

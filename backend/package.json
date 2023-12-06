@@ -1,0 +1,17 @@
+{
+  "name": "aplicacao",
+  "version": "1.0.0",
+  "description": "Aplicacao de Venda de Servicos para o Projeto do segundo semestre da faculdade de SI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "victor",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.2",
+    "sequelize": "^6.33.0"
+  }
+}
