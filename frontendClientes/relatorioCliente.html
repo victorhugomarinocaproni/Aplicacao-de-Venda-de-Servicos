@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/relatorioCliente.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Cliente</title>
+</head>
+<body>
+
+    <main>
+        <section class="report-section">
+
+            <header class="title">
+                <h1>InFocus Store</h1>
+            </header>
+
+            <div class="main-container">
+                <h1>Selecione uma opção:</h1>
+                <div class="buttons-container">
+                    <button class="servicos-comprados-button button">Serviços Comprados</button>
+                    <button class="servicos-usados-button button">Serviços Usados</button>
+                    <button class="recompensas-ganhas-button button">Recompensas Recebidas</button>
+                    <button class="recompensas-usadas-button button">Recompensas Utilizadas</button>
+                    <button class="saldos-button button">Saldos</button>
+                </div>
+                
+                <div class="close-element">
+                    <ion-icon name="close-outline" class="close-icon"></ion-icon>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="comprados-report-pop-up fecha-pop-up">
+            <header class="title">
+                <h1>InFocus Store</h1>
+            </header>
+
+            <div class="main-container-pop-up">
+
+                <div class="title-box">
+                    <h1 class="pop-up-title">Comprados</h1>
+                </div>
+
+                <div class="servicos-box">
+                    <div class="servicos-individuais">
+                        <h3>Serviços Individuais</h3>
+                        <ul class="display-servicos-individuais"></ul>
+                    </div>
+    
+                    <div class="kit-servicos">
+                        <h3>Kits de Serviços</h3>
+                        <ul class="display-kit-servicos"></ul>
+                    </div>
+                </div>
+
+                <div class="close-element-pop-up1 close">
+                    <ion-icon name="close-outline" class="close-icon"></ion-icon>
+                </div>
+            </div>
+        </section>
+
+        <section class="usados-report-pop-up fecha-pop-up">
+            <header class="title">
+                <h1>InFocus Store</h1>
+            </header>
+
+            <div class="main-container-pop-up">
+
+                <div class="title-box">
+                    <h1 class="pop-up-title">Usados</h1>
+                </div>
+
+                <div class="usados-box">
+                    <div class="servicos-usados">
+                        <h3>Servicos Utilizados</h3>
+                        <ul class="display-servicos-usados"></ul>
+                    </div>
+                </div>
+
+                <div class="close-element-pop-up2 close">
+                    <ion-icon name="close-outline" class="close-icon"></ion-icon>
+                </div>
+            </div>
+        </section>
+
+        <section class="recompensas-recebidas-report-pop-up fecha-pop-up">
+            <header class="title">
+                <h1>InFocus Store</h1>
+            </header>
+
+            <div class="main-container-pop-up">
+
+                <div class="title-box">
+                    <h1 class="pop-up-title">Recebidas</h1>
+                </div>
+
+                <div class="recompensas-recebidas-box">
+                    <div class="recompensas-recebidas">
+                        <h3>Recompensas Recebidas</h3>
+                        <ul class="display-recompensas-recebidas"></ul>
+                    </div>
+                </div>
+
+                <div class="close-element-pop-up3 close">
+                    <ion-icon name="close-outline" class="close-icon"></ion-icon>
+                </div>
+            </div>
+        </section>
+
+        <section class="recompensas-utilizadas-report-pop-up fecha-pop-up">
+            <header class="title">
+                <h1>InFocus Store</h1>
+            </header>
+
+            <div class="main-container-pop-up">
+
+                <div class="title-box">
+                    <h1 class="pop-up-title">Utilizadas</h1>
+                </div>
+
+                <div class="recompensas-utilizadas-box">
+                    <div class="recompensas-utilizadas">
+                        <h3>Recompensas Utilizadas</h3>
+                        <ul class="display-recompensas-utilizadas"></ul>
+                    </div>
+                </div>
+
+                <div class="close-element-pop-up4 close">
+                    <ion-icon name="close-outline" class="close-icon"></ion-icon>
+                </div>
+            </div>
+        </section>
+
+        <section class="saldos-report-pop-up fecha-pop-up">
+            <header class="title">
+                <h1>InFocus Store</h1>
+            </header>
+
+            <div class="main-container-pop-up">
+
+                <div class="title-box">
+                    <h1 class="pop-up-title">Itens Não Utilizados</h1>
+                </div>
+
+                <div class="saldos-box">
+                    <div class="servicos-saldo">
+                        <h3>Serviços</h3>
+                        <ul class="display-saldos-pedidos"></ul>
+                    </div>
+    
+                    <div class="kit-saldo">
+                        <h3>Recompensas</h3>
+                        <ul class="display-saldo-recompensas"></ul>
+                    </div>
+                </div>
+
+                <div class="close-element-pop-up5 close">
+                    <ion-icon name="close-outline" class="close-icon"></ion-icon>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="./assets/js/abrePopUpRelatorio.js"></script>
+    <script src="./assets/js/voltarPaginaInicialRelatorio.js"></script>
+    <script src="./assets/js/puxaDadosRelatorio.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

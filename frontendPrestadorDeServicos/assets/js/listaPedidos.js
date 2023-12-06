@@ -78,6 +78,8 @@ function criaParagrafo(){
 
 function criaNovoElementoHtml(servicoCode, pedidoCode){
 
+    if(servicoCode == 'KMT' || servicoCode == 'KFM' || servicoCode == 'KLP') return;
+
     const formulario = document.querySelector('.form');
 
     const label = writeLabel(servicoCode);
@@ -86,16 +88,15 @@ function criaNovoElementoHtml(servicoCode, pedidoCode){
 
     formulario.appendChild(label);
     formulario.appendChild(novoInput);
-    // formulario.appendChild(botaoEnviar);
 
 }
 
 function criaBotao(){
-    const botao = document.createElement('input');
-    botao.setAttribute("type", "submit");
-    botao.classList.add('send-order-button');
+    const button = document.createElement('input');
+    button.setAttribute("type", "submit");
+    button.classList.add('send-order-button');
 
-    return botao;
+    return button;
 }
 
 function writeLabel(servicoCode){
@@ -113,7 +114,9 @@ function interpretaCodigoLabel(codigoServico){
     if(codigoServico == 'FMT01') return `FORMATACAÇÃO`;
     else if (codigoServico == 'LPZ01') return `LIMPEZA`;
     else if (codigoServico == 'MTG01') return `MONTAGEM`;
-
+    else if (codigoServico == 'CNT01') return `CONSULTORIA`;
+    else if (codigoServico == 'CNS01') return `CONSOLE`;
+    else if (codigoServico == 'BKP01') return `BACKUP`;
 }
 
 function writeInput(pedidoCode){

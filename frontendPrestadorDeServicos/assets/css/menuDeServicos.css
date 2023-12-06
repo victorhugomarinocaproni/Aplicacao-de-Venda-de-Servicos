@@ -180,23 +180,90 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-y: hidden;
+}
+
+.lateral-ticket {
+    height: 35rem;
+    width: 18rem;
+    background-color: var(--white); 
+    border-top: 0.1rem solid var(--darker-purple);
+    border-bottom: 0.1rem solid var(--darker-purple);
+    border-left: 0.1rem solid var(--darker-purple);
+    border-radius: 2rem;
+    display: flex;
+    position: relative;
+}
+
+.lateral-ticket span {
+    font-size: 0.8rem;
+    height: 2rem;
+    width: 100%;
+    font-weight: 600;
+}
+
+.ticket-code-1 {
+    position: absolute;
+    rotate: 90deg;
+    top: 11rem;
+    left: -7.4rem;
+}
+
+.ticket-code-2 {
+    position: absolute;
+    rotate: 90deg;
+    top: 34rem;
+    left: -7.4rem;
+}
+
+.codigo-de-barras {
+    width: 10rem;
+    height: 30.5rem;
+    position: absolute;
+    left: 3.8rem;
+    top: 2.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fina {
+    background-color: rgb(58, 58, 58);
+    width: 10rem;
+    height: 0.2rem;
+}
+
+.media {
+    background-color: rgb(49, 48, 48);
+    width: 10rem;
+    height: 0.8rem;
+}
+
+.grossa {
+    background-color: rgb(28, 27, 27);
+    width: 10rem;
+    height: 1.5rem;
 }
 
 .pop-up-recompensa {
+    position: relative;
     height: 35rem;
-    width: 80%;
-    backdrop-filter: blur(10rem);
+    width: 70%;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(194,194,194,1) 62%, rgba(166,165,165,1) 100%);
     display: flex;
     flex-direction: column;
-    align-items: center;
     border-radius: 2rem;
-    border: 0.2rem solid var(--darker-purple);
+    border-top: 0.1rem solid var(--darker-purple);
+    border-bottom: 0.1rem solid var(--darker-purple);
+    border-right: 0.1rem solid var(--darker-purple);
 }
 
 .titulo-recompensas {
     font-size: 3rem;
     color: var(--darker-purple);
     margin-top: 2rem;
+    margin-left: 20rem;
 }
 
 .linha-titulo {
@@ -204,16 +271,31 @@ body {
     height: 0.2rem;
     background-color: var(--darker-purple);
     margin-top: 0.5rem;
+    margin-left: 18.5rem;
 }
 
 .recompensas-container {
     height: 20rem;
     width: 30rem;
     margin-top: 3.5rem;
-    border: 0.2rem solid var(--darker-purple);
+    margin-left: 5rem;
     border-radius: 1rem;
     overflow: scroll;
     overflow-x: hidden;
+}
+
+.recompensas-container::-webkit-scrollbar {
+    width: 0.1rem;
+}
+
+.recompensas-container::-webkit-scrollbar-track {
+    background-color: var(--light-gray);
+}
+
+.recompensas-container::-webkit-scrollbar-thumb {
+    background-color: rgb(143, 141, 141);
+    border-radius: 1rem;
+    border: 2rem solid black;
 }
 
 .botao-usar {
@@ -233,22 +315,34 @@ body {
     background-color: limegreen;
 }
 
+.decoration-image {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    right: 1rem;
+    top: 5rem;
+    transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.image-itslef {
+    width: 100%;
+}
+
 .close-element-pop-up {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 5rem;
-    height: 5rem;
-    background-color: var(--darker-purple);
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0 1.8rem 0 1.8rem;
+    border-radius: 100%;
     transition: all 150ms ease-in-out;
 }
 
 .close-icon-pop-up {
-    color: var(--white);
+    color: black;
     font-size: 2rem;
 }
 
@@ -281,7 +375,7 @@ body {
 }
 
 .sem-pedidos {
-    color: var(--white);
+    color: black;
     font-size: 2rem;
     margin-top: 8rem;
 }
@@ -293,7 +387,7 @@ body {
 }
 
 .labels {
-    color: white;
+    color: black;
     font-size: 1.3rem;
 }
 
@@ -303,12 +397,129 @@ body {
     align-items: center;
 }
 
+.send-recompensa-button {
+    background-color: var(--darker-purple);
+    color: var(--white);
+    border: none;
+    width: 18rem;
+    height: 3rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.8rem;
+    transition: all 150ms ease-in-out;
+    cursor: pointer;
+}
 
+.send-recompensa-button:hover {
+    transform: scale(1.1);
+    background-color: var(--lighter-purple);
+}
 
+.pop-up-aviso-recompensa {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(72, 72, 72, 0.493);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.pop-up-aviso {
+    width: 60%;
+    height: 35rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 1rem 1rem 2rem rgb(168, 168, 168);
+}
 
+.imagem-aviso {
+    width: 16rem;
+    height: 16rem;
+    background-image: url(../img/JGPs/moedas-de-ouro-caindo-da-pilha-de-dinheiro-na-mao-do-homem.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+.sombreamento {
+    width: 7rem;
+    height: 1rem;
+    border-radius: 15rem;
+    box-shadow: 2rem 2rem 2rem rgb(39, 38, 38);
+    position: absolute;
+    top: 14rem;
+    left: 23.5rem;
+}
 
+.titulo-aviso {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: rgb(25, 183, 25);
+}
+
+.linha-titulo-aviso {
+    width: 35rem;
+    height: 0.1rem;
+    background-color: rgb(25, 183, 25);
+    font-weight: 400;
+}
+
+.titulo-recompensa-ganha {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 2rem;
+}
+
+.fechar-aviso {
+    width: 10rem;
+    height: 2.5rem;
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    border: none;
+    background-color: rgb(35, 149, 35);
+    color: var(--white);
+    transition: all 150ms ease-in-out;
+}
+
+.fechar-aviso:hover {
+    transform: scale(1.1);
+    background-color: limegreen;
+}
+
+.container-x {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background-color: var(--white);
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3rem;
+    transition: all 150ms ease-in-out;
+}
+
+.container-x:hover {
+    background-color: rgb(175, 174, 174);
+}
+
+.icone-x {
+    font-size: 2rem;
+}
+
+.fecha-pop-up-aviso {
+    display: none;
+}
 
 
 

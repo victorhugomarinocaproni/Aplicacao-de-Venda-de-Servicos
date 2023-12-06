@@ -6,6 +6,7 @@ class Tabelas {
         this.criarTabelaPedidos();
         this.criarTabelaUtilizacaoPedidos();
         this.criarTabelaRecompensas();
+        this.criarTabelaUtilizacaoRecompensas();
     }
 
     criarTabelaCartao(){
@@ -22,7 +23,7 @@ class Tabelas {
 
     criarTabelaServicos(){
         const sql = `CREATE TABLE servicos(
-            cod_servico varchar(5) not null PRIMARY KEY,
+            cod_servico varchar(10) not null PRIMARY KEY,
             tipo_servico varchar(15),
             desc_servico varchar(350)
         );`;
@@ -56,8 +57,8 @@ class Tabelas {
 
     criarTabelaUtilizacaoPedidos(){
         const sql = `CREATE TABLE utilizacao_pedidos(
-            cod_utilizacao int PRIMARY KEY AUTO_INCREMENT,
-            data_utilizacao date,
+            cod_utilizacao_ped int PRIMARY KEY AUTO_INCREMENT,
+            data_utilizacao_ped date,
             cod_pedido int not null,
             foreign key (cod_pedido) references pedidos(cod_pedido)
         );`;
@@ -86,6 +87,22 @@ class Tabelas {
                 return;
             }
             console.log("Tabela de recompensas criada com êxito!");
+        });
+    }
+
+    criarTabelaUtilizacaoRecompensas(){
+        const sql = `CREATE TABLE utilizacao_recompensas(
+            cod_utilizacao_rec int PRIMARY KEY AUTO_INCREMENT,
+            data_utilizacao_rec date,
+            cod_recompensa int not null,
+            foreign key (cod_recompensa) references recompensas(cod_recompensa)
+        );`;
+        this.conexao.query(sql, error => {
+            if(error){
+                console.log("Tabela de utilizacao_recompensas já existe");
+                return;
+            }
+            console.log("Tabela de utilizacao_recompensas criada com êxito!");
         });
     }
 

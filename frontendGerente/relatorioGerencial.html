@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <link rel="stylesheet" href="./assets/css/relatorioGerencial.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Gerencial</title>
+</head>
+<body>
+
+    <main>
+        <section class="manager-report-section">
+
+            <header class="title">
+                <h1>InFocus Store</h1>
+            </header>
+
+            <div class="manager-report-main-container">
+                <h1 class="report-title">Relatório Gerencial:</h1>
+                <div class="main-data-container">
+
+                    <h1 class="titulo-usados">Vendidos e Utilizados</h1>
+                    <div class="services-data-container">
+
+                        <div class="selled-services services-container">
+                            <span>Serviços Vendidos</span>
+                            <div class="qtd-box">
+                                <p class="qtd-servicos"></p>
+                            </div>
+                        </div>
+
+                        <div class="selled-kits services-container">
+                            <span>Kits Vendidos</span>
+                            <div class="qtd-box">
+                                <p class="qtd-kits"></p>
+                            </div>
+                        </div>
+
+                        <div class="montagens-offered services-container">
+                            <span>Montagens Realizadas</span>
+                            <div class="qtd-box">
+                                <p class="qtd-montagem"></p>
+                            </div>
+                        </div>
+
+                        <div class="limpezas-offered services-container">
+                            <span>Limpezas Realizadas</span>
+                            <div class="qtd-box">
+                                <p class="qtd-limpezas"></p>
+                            </div>
+                        </div>
+
+                        <div class="formatacoes-offered services-container">
+                            <span>Formatações Realizadas</span>
+                            <div class="qtd-box">
+                                <p class="qtd-formatacoes"></p>
+                            </div>
+                        </div>
+
+                        <div class="consultoria-offered services-container">
+                            <span>Consultorias Realizadas</span>
+                            <div class="qtd-box">
+                                <p class="qtd-consultorias"></p>
+                            </div>
+                        </div>
+
+                        <div class="consoles-offered services-container">
+                            <span>Serviços de Console</span>
+                            <div class="qtd-box">
+                                <p class="qtd-consoles"></p>
+                            </div>
+                        </div>
+
+                        <div class="backups-offered services-container">
+                            <span>Backups Realizados</span>
+                            <div class="qtd-box">
+                                <p class="qtd-backups"></p>
+                            </div>
+                        </div>
+
+                        <div class="recompensas-geradas-qtd services-container">
+                            <span>Recompensas Geradas</span>
+                            <div class="qtd-box">
+                                <p class="qtd-recompensas"></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h1 class="titulo-nao-usados">Não Utilizados</h1>
+                    <div class="not-used-data-container">
+
+                        <div class="selled-services services-container">
+                            <span>Serviços Não Utilizados</span>
+                            <div class="qtd-box">
+                                <p class="servicos-nao-usados"></p>
+                            </div>
+                        </div>
+
+                        <div class="rewards-not-used services-container">
+                            <span>Recompensas Não Utilizadas</span>
+                            <div class="qtd-box">
+                                <p class="recompensas-nao-usadas"></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="update-data-button">Atualizar</button>
+                
+                <div class="close-element">
+                    <ion-icon name="close-outline" class="close-icon"></ion-icon>
+                </div>
+            </div>
+
+        </section>
+
+    <script src="./assets/js/estruturaRelatorio.js"></script>
+    <script src="./assets/js/botaoVoltar.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>

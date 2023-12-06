@@ -34,7 +34,7 @@ function getRecompensas(){
                 formularioRecompensas.addEventListener('submit', event => {
                     event.preventDefault();
             
-                    let caixasMarcadas = document.querySelectorAll('input[type=checkbox]:checked');
+                    let caixasMarcadas = formularioRecompensas.querySelectorAll('input[type=checkbox]:checked');
                     const cartaoId = localStorage.getItem('cartaoId');
             
                     const checkboxesSelecionadas = [];
@@ -57,8 +57,22 @@ function getRecompensas(){
                                     throw new Error (`Erro na atualização do pedido: ${response.statusText}`);
                                 }
                                 console.log('Atualização da recompensa realizada com êxito!');
+                                popUp.classList.add('fecha-pop-up');
                             })
                             .catch(error => console.log(`Error: ${error}`));
+
+                            const dataFormatada = getDataFormatada();
+
+                            fetch(`http://localhost:3000/recompensa-utilizada`, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type':'application/json',
+                                },
+                                body: JSON.stringify({
+                                    data_utilizacao_rec: dataFormatada,
+                                    cod_recompensa: elemento
+                                }),
+                            });
                     });
                 });
             }
@@ -104,7 +118,7 @@ function criaNovoElemento(recompensaCode, recompensaAbreviacao){
 function criaButton(){
     const botao = document.createElement('input');
     botao.setAttribute("type", "submit");
-    botao.classList.add('send-order-button');
+    botao.classList.add('send-recompensa-button');
 
     return botao;
 }
@@ -148,6 +162,16 @@ function fechaPopUp(){
     fecha.addEventListener('click', e => {
         popUp.classList.add('fecha-pop-up');
     })
+}
+
+function getDataFormatada() {
+    const data = new Date();
+    const ano = data.getFullYear();
+    const mes = String(data.getMonth() + 1).padStart(2, '0'); // Adiciona zero à esquerda se for necessário
+    const dia = String(data.getDate()).padStart(2, '0'); // Adiciona zero à esquerda se for necessário
+    
+    const dataFormatada = `${ano}-${mes}-${dia}`;
+    return dataFormatada;
 }
 
 fechaPopUp();

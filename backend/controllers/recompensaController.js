@@ -12,6 +12,30 @@ class RecompensaController{
     atualizar(id){
         return recompensaModel.atualizar(id);
     }
+
+    listarRecompensasRecebidas(id){
+        return recompensaModel.listarRecompensasRecebidas(id);
+    }
+
+    listarRecompensasUtilizadas(id){
+        return recompensaModel.listarRecompensasUtilizadas(id);
+    }
+
+    listarRecompensasNaoUtilizadas(id){
+        return recompensaModel.listarRecompensasNaoUtilizadas(id);
+    }
+
+    listarRecompensasGeradas(){
+        return recompensaModel.listarRecompensasGeradas();
+    }
+
+    listarTodasRecompensasNaoUtilizadas(){
+        return recompensaModel.listarTodasRecompensasNaoUtilizadas();
+    }
+
+    registraUtilizacaoRecompensa(recompensaUtilizada){
+        return recompensaModel.registraUtilizacaoRecompensa(recompensaUtilizada);
+    }
 }
 
 module.exports = new RecompensaController();

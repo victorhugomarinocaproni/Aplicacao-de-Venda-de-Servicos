@@ -8,7 +8,6 @@ function reajustaDisplay(){
 }
     
 function puxaDadosCartao(){
-
     botaoEntrar.addEventListener('click', event =>{
         fetch(`http://localhost:3000/cartao`)
             .then(response => response.json())

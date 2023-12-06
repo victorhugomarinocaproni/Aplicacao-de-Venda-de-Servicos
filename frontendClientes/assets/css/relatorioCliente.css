@@ -1,0 +1,406 @@
+:root {
+    --darker-purple: #0E011B;
+    --lighter-purple: #9c66f5;
+    --light-gray: #aaaaaa;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.report-section {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/JPGs/main-bg-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(0.3rem);
+    border-bottom: 0.1rem solid white;
+}
+
+.title h1 {
+    color: white;
+    font-size: 5rem;
+    font-weight: 100;
+}
+
+.main-container {
+    width: 65rem;
+    height: 33rem;
+    border-radius: 2rem;
+    border: 0.2rem solid white;
+    backdrop-filter: blur(1rem);
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.main-container h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--white);
+    padding-top: 5rem;
+    padding-left: 5rem;
+    transform: translateX(-2.5rem);
+}
+
+.buttons-container {
+    display: flex;
+    width: 55rem;
+    height: 17.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 0.1rem solid var(--light-gray);
+    gap: 0rem 2rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
+.button {
+    width: 15rem;
+    height: 5rem;
+    margin-top: 2rem;
+    background-color: var(--darker-purple);
+    border: none;
+    border-radius: 0.5rem;
+    transition: all 150ms ease-in-out;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.button:hover {
+    background-color: var(--lighter-purple);
+}
+
+.close-element {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0 1.6rem 0 1.6rem;
+    border: 0.18rem solid white;
+    background-color: var(--darker-purple);
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+.close-element:hover {
+    background-color: var(--lighter-purple);
+}
+
+.close-icon {
+    color: white;
+    font-size: 2rem;
+}
+
+.comprados-report-pop-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/JPGs/main-bg-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-container-pop-up {
+    width: 75rem;
+    height: 33rem;
+    border-radius: 2rem;
+    border: 0.2rem solid white;
+    backdrop-filter: blur(1rem);
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.title-box {
+    width: 45rem;
+    height: 6rem;
+    border: 0.1rem solid var(--light-gray);
+    margin-top: 2rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(125, 121, 121, 0.516);
+}
+
+.pop-up-title {
+    font-size: 4rem;
+    color: var(--darker-purple);
+}
+
+.servicos-box {
+    display: flex;
+    width: 80%;
+    height: 20rem;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+}
+
+.servicos-individuais {
+    border: 0.1rem solid var(--light-gray);
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.2rem;
+}
+
+h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: var(--light-gray);
+    border-bottom: 0.1rem solid var(--light-gray);
+}
+
+.display-servicos-individuais {
+    width: 17rem;
+}
+
+.kit-servicos {
+    border: 0.1rem solid var(--light-gray);
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.2rem;
+}
+
+.display-kit-servicos {
+    width: 15rem;
+}
+
+ul{
+    margin-top: 1rem;
+    width: 15rem;
+    height: 14rem;
+    overflow-y: scroll;
+}
+
+li {
+    font-size: 1.3rem;
+    color: var(--light-gray);
+    margin-top: 1rem;
+}
+
+ul::-webkit-scrollbar {
+    background-color: rgb(93, 91, 91);
+    width: 0.5rem;
+    border-radius: 5rem;
+}
+
+ul::-webkit-scrollbar-track {
+    border-radius: 5rem;
+}
+
+ul::-webkit-scrollbar-thumb {
+    border-radius: 5rem;
+    background-color: var(--light-gray);
+}
+
+.usados-report-pop-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/JPGs/main-bg-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.usados-box{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 20rem;
+    margin-top: 2.5rem;
+}
+
+.servicos-usados {
+    border: 0.1rem solid var(--light-gray);
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.2rem;
+}
+
+.display-servicos-usados {
+    width: 17rem;
+}
+
+.recompensas-recebidas-report-pop-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/JPGs/main-bg-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.recompensas-recebidas-box{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 20rem;
+    margin-top: 2.5rem;
+}
+
+.recompensas-recebidas {
+    border: 0.1rem solid var(--light-gray);
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.2rem;
+}
+
+.display-recompensas-recebidas{
+    width: 23rem;
+}
+
+.recompensas-utilizadas-report-pop-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/JPGs/main-bg-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.recompensas-utilizadas-box{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 20rem;
+    margin-top: 2.5rem;
+}
+
+.recompensas-utilizadas {
+    border: 0.1rem solid var(--light-gray);
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.2rem;
+}
+
+.display-recompensas-utilizadas {
+    width: 23rem;
+}
+
+.saldos-report-pop-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/JPGs/main-bg-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.saldos-box{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 20rem;
+    margin-top: 2.5rem;
+    gap: 2rem;
+}
+
+.servicos-saldo {
+    border: 0.1rem solid var(--light-gray);
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.2rem;
+}
+
+.display-saldos-individuais {
+    width: 23rem;
+}
+
+.kit-saldo {
+    border: 0.1rem solid var(--light-gray);
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.2rem;
+}
+
+.display-saldo-kit {
+    width: 15rem;
+}
+
+.fecha-pop-up {
+    display: none;
+}
+
+.close {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0 1.6rem 0 1.6rem;
+    border: 0.18rem solid white;
+    background-color: var(--darker-purple);
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+.close:hover {
+    background-color: var(--lighter-purple);
+
+}
+
+

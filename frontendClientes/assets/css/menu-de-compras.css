@@ -144,6 +144,19 @@ body {
     overflow-y: scroll;
 }
 
+.main-products-container::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+.main-products-container::-webkit-scrollbar-track {
+    background-color: var(--light-gray);
+}
+
+.main-products-container::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: rgb(114, 114, 114);   
+}
+
 .product-card {
     width: 20rem;
     height: 23rem;
@@ -185,14 +198,21 @@ body {
 }
 
 .consultoria-bg {
-    background-image: url(../img/JPGs/consultoria.png);
+    background-image: url(../img/JPGs/consultoria.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .console-bg {
-    background-image: url(../img/JPGs/console.png);
+    background-image: url(../img/JPGs/console.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.backup-bg {
+    background-image: url(../img/JPGs/backup.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

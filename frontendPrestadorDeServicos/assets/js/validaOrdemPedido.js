@@ -4,19 +4,20 @@ function verificaSelecionados(){
     formulario.addEventListener('submit', event => {
         event.preventDefault();
 
-        let caixasMarcadas = document.querySelectorAll('input[type=checkbox]:checked');
+        let checkedBoxes = formulario.querySelectorAll('input[type=checkbox]:checked');
         const cartaoId = localStorage.getItem('cartaoId');
 
-        const checkboxesSelecionadas = [];
+        const arrCheckedBoxes = [];
 
-        caixasMarcadas.forEach(checkbox => {
-            checkboxesSelecionadas.push(checkbox.id);
+        checkedBoxes.forEach(checkbox => {
+            arrCheckedBoxes.push(checkbox.id);
         });
 
-        console.log(checkboxesSelecionadas);
+        console.log(arrCheckedBoxes);
 
-        checkboxesSelecionadas.forEach(elemento => {
-            fetch(`http://localhost:3000/atualiza/:${elemento}`, {
+        arrCheckedBoxes.forEach(element => {
+
+            fetch(`http://localhost:3000/atualiza-pedido/${element}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -26,12 +27,28 @@ function verificaSelecionados(){
                     if(!response.ok){
                         throw new Error (`Erro na atualização do pedido: ${response.statusText}`);
                     }
-                    console.log('Atualização realizada com êxito!');
+                    console.log('Atualização de pedido realizada com êxito!');
                 })
                 .catch(error => console.log(`Error: ${error}`));
+
+            const dataUtilizacao = getDataFormatada();
+
+            fetch(`http://localhost:3000/pedido-utilizado`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type':'application/json',
+                },
+                body: JSON.stringify({
+                    dataUtilizacao: dataUtilizacao,
+                    codPedido: element
+                }),
+            });
+
         });
 
-        if(checkboxesSelecionadas.length === 2){
+        if(arrCheckedBoxes.length < 2) location.reload();
+
+        else if(arrCheckedBoxes.length === 2){
             const dataRecompensa = getDataFormatada();
             console.log(dataRecompensa);
 
@@ -46,12 +63,18 @@ function verificaSelecionados(){
                     nome: "sistema_operacional",
                     abreviacao: 'INST-SO'
                 }),
-            })
+            });
 
-            alert('Você ganhou uma recompensa: instalção de sistema operacional!');
+            const popUpAviso = document.querySelector('.pop-up-aviso-recompensa');
+            const text = document.querySelector('.titulo-recompensa-ganha');
+
+            popUpAviso.classList.remove('fecha-pop-up-aviso');
+
+            text.innerHTML = `INSTALAÇÃO DE SISTEMA OPERACIONAL`;
+
         }
 
-        if(checkboxesSelecionadas.length === 3){
+        else if(arrCheckedBoxes.length === 3){
             const dataRecompensa = getDataFormatada();
             console.log(dataRecompensa);
 
@@ -66,12 +89,17 @@ function verificaSelecionados(){
                     nome: 'manutenção',
                     abreviacao: 'MAN-BO'
                 }),
-            })
+            });
 
-            alert('Você ganhou uma recompensa: manutenção de qualquer problema!');
+            const popUpAviso = document.querySelector('.pop-up-aviso-recompensa');
+            const text = document.querySelector('.titulo-recompensa-ganha');
+
+            popUpAviso.classList.remove('fecha-pop-up-aviso');
+
+            text.innerHTML = `MANUTENÇÃO DE PROBLEMAS`;
         }
 
-        if(checkboxesSelecionadas.length > 3){
+        else if(arrCheckedBoxes.length > 3){
             const dataRecompensa = getDataFormatada();
             console.log(dataRecompensa);
 
@@ -86,9 +114,14 @@ function verificaSelecionados(){
                     nome: 'antivirus',
                     abreviacao: 'ANT-V'
                 }),
-            })
+            });
 
-            alert('Você ganhou uma recompensa: instalação de antivírus!');
+            const popUpAviso = document.querySelector('.pop-up-aviso-recompensa');
+            const text = document.querySelector('.titulo-recompensa-ganha');
+
+            popUpAviso.classList.remove('fecha-pop-up-aviso');
+
+            text.innerHTML = `INSTALAÇÃO DE ANTIVÍRUS`;
         }
     });
 }
@@ -103,6 +136,23 @@ function getDataFormatada() {
     return dataFormatada;
 }
 
+function fechaPopUpAvisoRecompensa(){
+    const botaoAvancar = document.querySelector('.fechar-aviso');
+    const closeIcon = document.querySelector('.icone-x');
+    const popUpAviso = document.querySelector('.pop-up-aviso-recompensa');
+
+    botaoAvancar.addEventListener('click', e =>{
+        popUpAviso.classList.add('fecha-pop-up-aviso');
+        location.reload();
+    });
+
+    closeIcon.addEventListener('click', e => {
+        popUpAviso.classList.add('fecha-pop-up-aviso');
+        location.reload();
+    });
+}
+
+fechaPopUpAvisoRecompensa();
 
 verificaSelecionados();
 
