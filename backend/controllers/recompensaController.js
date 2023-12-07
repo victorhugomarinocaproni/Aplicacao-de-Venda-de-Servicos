@@ -29,10 +29,6 @@ class RecompensaController{
         return recompensaModel.listarRecompensasGeradas();
     }
 
-    listarTodasRecompensasNaoUtilizadas(){
-        return recompensaModel.listarTodasRecompensasNaoUtilizadas();
-    }
-
     registraUtilizacaoRecompensa(recompensaUtilizada){
         return recompensaModel.registraUtilizacaoRecompensa(recompensaUtilizada);
     }

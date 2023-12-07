@@ -52,11 +52,11 @@ router.get("/pedidos-saldo/:id", (req,res)=>{
     console.log(resposta);
 });
 
-router.get("/pedidos-vendidos-e-usados", (req,res)=>{
+router.get("/pedidos-vendidos", (req,res)=>{
 
-    const resposta = pedidoController.listarTodosPedidosUsados();
+    const resposta = pedidoController.listarTodosPedidosVendidos();
     resposta
-        .then(todosPedidosUsados => res.status(200).json(todosPedidosUsados))
+        .then(todosPedidosVendidos => res.status(200).json(todosPedidosVendidos))
         .catch(error => res.status(400).json({
             error: error.message,
             mensagem: "Erro ao listar TODOS os pedidos usados!"

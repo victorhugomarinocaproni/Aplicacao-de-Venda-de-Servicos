@@ -120,24 +120,6 @@ class RecompensaModel{
         });
     }
 
-    listarTodasRecompensasNaoUtilizadas(){
-        const sql =`SELECT 
-                    abreviacao
-                    FROM recompensas
-                    WHERE status_recompensa = 'A'`;
-        return new Promise((resolve, reject) => {
-            conexao.query(sql, (error, resposta) => {
-                if(error){
-                    console.log("Erro ao listar TODAS recompensas não utilizadas!");
-                    console.log(error);
-                    reject(error);
-                }
-                console.log("Todas recompensas não utilizadas foram listadas com sucesso!");
-                resolve(resposta);
-            })
-        });
-    }
-
     atualizar(id){
         console.log(id);
         const sql = `UPDATE recompensas SET status_recompensa = 'F' WHERE cod_recompensa = ${id}`;

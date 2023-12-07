@@ -25,8 +25,8 @@ class PedidoModel{
         return pedidoModel.listarNaoUsados(id);
     }
 
-    listarTodosPedidosUsados(){
-        return pedidoModel.listarTodosPedidosUsados();
+    listarTodosPedidosVendidos(){
+        return pedidoModel.listarTodosPedidosVendidos();
     }
 
     listarKitsVendidos(){

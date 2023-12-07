@@ -8,13 +8,14 @@ const cartaoCliente = localStorage.getItem('cartaoId');
 function getDadosServicosComprados(){
 
     buttonServicosComprados.addEventListener('click', e => {
+
+        zeraDisplaysParaAtualizar();
     
         fetch(`http://localhost:3000/pedidos-comprados/${cartaoCliente}`)
             .then(response => response.json())
             .then( (dadosRecebidos) => {
 
                 const dadosTratados = interpretaCodPedido(dadosRecebidos);
-                // console.log(dadosTratados);
 
                 estruturaRelatorioCompras(dadosTratados);
 
@@ -25,11 +26,11 @@ function getDadosServicosComprados(){
     });
 }
 
-getDadosServicosComprados();
-
 function getDadosServicosUsados(){
 
     buttonServicosUsados.addEventListener('click', e => {
+
+        zeraDisplaysParaAtualizar();
     
         fetch(`http://localhost:3000/pedidos-usados/${cartaoCliente}`)
             .then(response => response.json())
@@ -46,11 +47,11 @@ function getDadosServicosUsados(){
     });
 }
 
-getDadosServicosUsados();
-
 function getDadosRecompensasRecebidas(){
 
     buttonRecompensasRecebidas.addEventListener('click', e => {
+
+        zeraDisplaysParaAtualizar();
     
         fetch(`http://localhost:3000/recompensas-recebidas/${cartaoCliente}`)
             .then(response => response.json())
@@ -68,11 +69,12 @@ function getDadosRecompensasRecebidas(){
     });
 }
 
-getDadosRecompensasRecebidas();
-
 function getDadosRecompensasUtilizadas(){
 
     buttonRecompensasUsadas.addEventListener('click', e => {
+
+        zeraDisplaysParaAtualizar();
+
         fetch(`http://localhost:3000/recompensas-usadas/${cartaoCliente}`)
             .then(response => response.json())
             .then( (dadosRecebidos) => {
@@ -89,11 +91,12 @@ function getDadosRecompensasUtilizadas(){
     });
 }
 
-getDadosRecompensasUtilizadas();
-
 function getDadosSaldo(){
 
     buttonSaldo.addEventListener('click', e => {
+
+        zeraDisplaysParaAtualizar();
+
         fetch(`http://localhost:3000/pedidos-saldo/${cartaoCliente}`)
             .then(response => response.json())
             .then( (dadosRecebidosPedidos) => {
@@ -109,23 +112,21 @@ function getDadosSaldo(){
                 console.log(error);
             });
             
-            fetch(`http://localhost:3000/recompensas-saldo/${cartaoCliente}`)
-            .then(response => response.json())
-            .then( (dadosRecebidosRecompensas) => {
+        fetch(`http://localhost:3000/recompensas-saldo/${cartaoCliente}`)
+        .then(response => response.json())
+        .then( (dadosRecebidosRecompensas) => {
 
-                const dadosRecompensaTratados = interpretaAbreviacaoRecompensa(dadosRecebidosRecompensas);
-                console.log(dadosRecompensaTratados);
+            const dadosRecompensaTratados = interpretaAbreviacaoRecompensa(dadosRecebidosRecompensas);
+            console.log(dadosRecompensaTratados);
 
-                estruturaRelatorioRecompensasNaoUsadas(dadosRecompensaTratados);
+            estruturaRelatorioRecompensasNaoUsadas(dadosRecompensaTratados);
 
-            })
-            .catch(error => {
-                console.log(error);
-            });
+        })
+        .catch(error => {
+            console.log(error);
+        });
     });
 }
-
-getDadosSaldo();
 
 function interpretaCodPedido(dados){
 
@@ -452,4 +453,32 @@ function formataDataRecompensas(dadoTratado){
     }
     return null;
 }
+
+function zeraDisplaysParaAtualizar(){
+    const displayServicosIndividuais = document.querySelector('.display-servicos-individuais');
+    const displayKitServicos = document.querySelector('.display-kit-servicos');
+    const displayServicosUsados = document.querySelector('.display-servicos-usados');
+    const displayRecompensasRecebidas = document.querySelector('.display-recompensas-recebidas');
+    const displayRecompensasUtilizadas = document.querySelector('.display-recompensas-utilizadas');
+    const displayServicosNaoUsados = document.querySelector('.display-saldos-pedidos');
+    const displayRecompensasNaoUtilizadas = document.querySelector('.display-saldo-recompensas');
+
+    displayServicosIndividuais.innerHTML = ``;
+    displayKitServicos.innerHTML = ``;
+    displayServicosUsados.innerHTML = ``;
+    displayRecompensasRecebidas.innerHTML = ``;
+    displayRecompensasUtilizadas.innerHTML = ``;
+    displayServicosNaoUsados.innerHTML = ``;
+    displayRecompensasNaoUtilizadas.innerHTML = ``;
+}
+
+//Inicializa as Funções Principais:
+getDadosServicosComprados();
+getDadosServicosUsados();
+getDadosRecompensasRecebidas();
+getDadosRecompensasUtilizadas();
+getDadosSaldo();
+
+
+
 
