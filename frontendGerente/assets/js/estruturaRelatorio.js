@@ -1,6 +1,6 @@
 function getDados(){
 
-    fetch(`http://localhost:3000/pedidos-vendidos-e-usados`)
+    fetch(`http://localhost:3000/pedidos-vendidos`)
         .then(response => response.json())
         .then( (servicos) => {
 
@@ -48,17 +48,6 @@ function getDados(){
         console.log(error);
     });
 
-    fetch(`http://localhost:3000/recompensas-nao-utilizadas`)
-    .then(response => response.json())
-    .then( (recompensasNaoUtilizadas) => {
-
-        const qtdRecompensasNaoUtilizadas = quantificaRecompensasNaoUtilizadas(recompensasNaoUtilizadas);
-        mostraQuantidadeRecompensasNaoUtilizadasNaTela(qtdRecompensasNaoUtilizadas);
-
-        })
-    .catch(error => {
-        console.log(error);
-    });
 }
 
 function atualizaDados(){
@@ -128,14 +117,6 @@ function quantificaRecompensasGeradas(recompensasGeradas){
     return qtdRecompensasGeradas;
 }
 
-function quantificaRecompensasNaoUtilizadas(recompensasNaoUtilizadas){
-    let qtdRecompensasNaoUtilizadas = 0;
-    recompensasNaoUtilizadas.forEach(recompensaNaoUsada => {
-        qtdRecompensasNaoUtilizadas++;
-    });
-    return qtdRecompensasNaoUtilizadas;
-}
-
 function mostraQuantidadeServicosNaTela(objetoQuantificado){
     const displayServicosIndividuais = document.querySelector('.qtd-servicos');
     const displayMontagens = document.querySelector('.qtd-montagem');
@@ -170,12 +151,6 @@ function mostraQuantidadeRecompensasGeradasNaTela(qtdRecompensasGeradas){
     const displayRecompensasGeradas = document.querySelector('.qtd-recompensas');
 
     displayRecompensasGeradas.innerHTML = `${qtdRecompensasGeradas}`;
-}
-
-function mostraQuantidadeRecompensasNaoUtilizadasNaTela(qtdRecompensasNaoUtilizadas){
-    const displayRecompensasNaoUtilizadas = document.querySelector('.recompensas-nao-usadas');
-
-    displayRecompensasNaoUtilizadas.innerHTML = `${qtdRecompensasNaoUtilizadas}`;
 }
 
 // Inicializa as Funções Principais

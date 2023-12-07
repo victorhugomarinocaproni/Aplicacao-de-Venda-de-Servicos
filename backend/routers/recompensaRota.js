@@ -58,17 +58,6 @@ router.get("/recompensas-geradas", (req, res) => {
         })); 
 });
 
-router.get("/recompensas-nao-utilizadas", (req, res) => {
-
-    const resposta = recompensaController.listarTodasRecompensasNaoUtilizadas();
-    resposta
-        .then(recompensasNaoUtilizadas => res.status(201).json(recompensasNaoUtilizadas))
-        .catch(error => res.status(401).json({
-            erro: error.message,
-            mensagem: "Erro ao listar TODAS as recompensas não utilizadas"
-        })); 
-});
-
 router.post("/recompensa", (req,res)=>{
     const novaRecompensa = req.body;
     console.log(novaRecompensa);

@@ -83,11 +83,10 @@ class PedidoModel{
         });
     }
 
-    listarTodosPedidosUsados(){
+    listarTodosPedidosVendidos(){
         const sql =`SELECT 
                     cod_servico
-                    FROM pedidos
-                    WHERE status_pedido = 'F'`;
+                    FROM pedidos`;
         return new Promise((resolve, reject)=>{
             conexao.query(sql, (error, resposta)=>{
                 if(error){
